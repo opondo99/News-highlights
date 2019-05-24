@@ -17,7 +17,8 @@
     </head>
     <body>
         {% for item in sources %}
-            {{item.id}} <br>
+            <br>
+            <a href="/sources/{{item.id}}">{{item.id}} </a>
         {% endfor %}
     </body>
 </html>

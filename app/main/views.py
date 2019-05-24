@@ -18,7 +18,7 @@ def index():
     return render_template('index.html', title = title, sources = sources)
 
 
-@main.route('/sources/<string:title>')
+@main.route('/sources/<title>')
 def articles(title):
     articles = get_articles(title)
 
