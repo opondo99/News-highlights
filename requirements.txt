@@ -62,7 +62,7 @@ scour==0.37
 SecretStorage==2.3.1
 simplejson==3.15.0
 six==1.11.0
-system-service==0.3
+#system-service==0.3
 systemd-python==234
 ubuntu-drivers-common==0.0.0
 ufw==0.36
