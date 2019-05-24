@@ -35,7 +35,7 @@ MarkupSafe==1.1.1
 netifaces==0.10.4
 oauthlib==2.0.6
 olefile==0.46
-openshot-qt==2.4.2
+#openshot-qt==2.4.2
 pexpect==4.6.0
 Pillow==5.2.0
 pipenv==2018.11.26
