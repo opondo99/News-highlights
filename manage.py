@@ -12,8 +12,8 @@ def test():
     Run the tests
     """
     import unittest
-    test = unittest.TestLoader().discover('tests')
-    unittest.TextRunner(verbosity=2).run(tests)
+    tests = unittest.TestLoader().discover('tests')
+    unittest.TextTestRunner(verbosity=2).run(tests)
 
 if __name__ == '__main__':
     manager.run()
