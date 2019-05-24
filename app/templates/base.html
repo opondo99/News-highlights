@@ -1,0 +1,76 @@
+{% extends 'bootstrap/base.html' %}
+{% import 'macros.html' as macro %}
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    {% if title%}
+    <title>{{title}}</title>
+    {% else %}
+    <title>News Highlights</title>
+    {%endif%}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet"  href="{{ url_for('static', filename='/css/style.css') }}">
+</head>
+<body style="
+            padding:0;
+            margin:0;
+            display: grid;
+            grid-template-column: 1fr 1fr 1fr;
+            grid-template-row: 60px auto;
+            grid-column-gap: 50px;
+            grid-template-areas: 
+                'header'
+                'grid-container grid-container grid-container'
+
+            ;
+            ">
+    {%block content%}
+
+    <div class="header" style="
+                            background: black; 
+                            color:white;
+                            height: 60px;
+                            padding-top:0;
+                            margin-top:0;
+                            ">
+        <h2 style="
+                padding-top:3%;
+                padding-left:5%;
+                margin:0;
+                ">News Highlights</h2>
+    </div>
+    <div >
+    {% for source in sources %}
+        <div class="grid-container" style="
+                /* background:rgb(131, 118, 118); */
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+                /*color:white;*/ 
+                padding-top:0; 
+                margin-top:0;
+                padding-left: 2%;
+            ">
+            <h3 class="grid-item" style="
+                                        padding:10px;
+                                        margin:0;
+                                        ">{{source.id}}</h3>
+            <div class="grid-item" style="
+                                        font-size: 17px;
+                                        padding:10px;
+                                        ">
+                <p class="grid-item">{{source.description}}</p>
+                <p class="grid-item">{{source.url}}</p>
+                <p class="grid-item"><a href="/sources/{{source.id}}">Explore</a></p>  
+                <p class="grid-item">Language: {{source.language}}</p>
+                <p class="grid-item">Country: {{source.country}}</p>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+    {%endblock content%}
+</body>
+</html>

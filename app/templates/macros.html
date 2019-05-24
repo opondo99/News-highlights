@@ -1,0 +1,33 @@
+{% macro displaySources(sources)%}
+{% for source in sources %}
+
+    <div class="card">
+        <h5 class="card-header">{{source.id}}</h5>
+        <div class="card-body">
+            <p class="card-text">{{source.description}}</p>
+            <p class="card-text">{{source.url}}</p>
+            <p class="card-text"><a href="/sources/{{source.id}}">Explore</a></p>  
+            <p class="card-text float-left">Language: {{source.language}}</p>
+            <p class="card-text float-right">Country: {{source.country}}</p>
+        </div>
+    </div>
+
+{% endfor %}
+{% endmacro %}
+
+{% macro displayArticles(articles) %}
+{% for article in articles %}
+    <div class="col-sm-4 col-md-4 col-lg-3">
+    <div class="card">
+        <img class="card-img-top img-responsive" src="{{article.urlToImage}}" >
+        <div class="card-body">
+            <h5 class="card-title">{{article.title}} <small>~Author: <cite title="author">{{article.author}}</cite></small> </h5>
+            <p class="card-text">{{article.description}}</p>
+            <p class="card-text float-left">{{article.publishedAt}}</p>
+            <p class="card-text float-right"><a href="{{article.url}}"> View Post </a></p>
+        </div>
+    </div>
+    </div>
+
+{% endfor %}
+{% endmacro %}

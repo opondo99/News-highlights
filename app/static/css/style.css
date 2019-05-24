@@ -1,0 +1,11 @@
+body{
+    display: grid;
+    padding: 20%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background: rgb(131, 118, 118);
+}
+
+.grid-container{
+    display:grid;
+    background: aliceblue;
+}

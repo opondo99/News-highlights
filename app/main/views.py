@@ -15,7 +15,7 @@ def index():
 
     title = 'News Highlights'
 
-    return render_template('index.html', title = title, sources = sources)
+    return render_template('base.html', title = title, sources = sources)
 
 
 @main.route('/sources/<title>', methods=['GET','POST'])
