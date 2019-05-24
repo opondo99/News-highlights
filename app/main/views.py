@@ -3,7 +3,7 @@ from . import main
 from ..requests import get_sources, get_articles
 from ..models import Source, Article
 
-@main.route('/')
+@main.route('/', methods=['GET','POST'])
 def index():
     sources = get_sources()
     # general = get_sources('general')
@@ -18,7 +18,7 @@ def index():
     return render_template('index.html', title = title, sources = sources)
 
 
-@main.route('/sources/<title>')
+@main.route('/sources/<title>', methods=['GET','POST'])
 def articles(title):
     articles = get_articles(title)
 
