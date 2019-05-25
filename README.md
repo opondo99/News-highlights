@@ -61,7 +61,7 @@ export SECRET_KEY=<YOUR SECRET KEY>
 
 python3 manage.py runserver
 ``` 
-To get an api key you need to have an account at https://newsapi.org/ and generate your own api key.
+To get an api key you need to have an account at https://newsapi.org/ and generate your own api key. After you have added the piece of code , run the file in the terminal and the application should start running.
 
 ## License ([Apache License]http://www.apache.org/licenses/) 
 
