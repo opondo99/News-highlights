@@ -93,7 +93,10 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+<<<<<<< HEAD
 mark/
+=======
+>>>>>>> 6e0a589e9385d95a20108540bd9a83e218bf171d
 
 # Spyder project settings
 .spyderproject
