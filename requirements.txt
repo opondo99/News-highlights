@@ -53,7 +53,7 @@ pyRFC3339==1.1
 python-debian==0.1.33
 pytz==2018.7
 pyxdg==0.25
-PyYAML==3.12
+PyYAML==5.4
 pyzmq==17.1.0
 reportlab==3.5.6
 requests==2.18.4
